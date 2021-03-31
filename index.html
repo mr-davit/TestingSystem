@@ -22,14 +22,16 @@
            <div class="test"></div>
            <form class="reg-form" type="submit">
                <h4>რეგისტრაცია</h4>
-               <input name="reg-email-input" type="email" placeholder="შეიყვანეთ ელ ფოსტა" />
-               <input name="reg-name-input" type="text" placeholder="შეიყვანეთ სახელი" />
-               <input name="reg-alstname-input" type="text" placeholder="შეიყვანეთ გვარდი" />
-               <input name="reg-password-input" type="password" placeholder="შეიყვანეთ პაროლი" />
-               <input name="reg-repassword-input" type="password" placeholder="გაიმეორეთ პაროლი" />
+               <input name="reg-email-input" type="email" id="reg-email-input" placeholder="შეიყვანეთ ელ ფოსტა" />
+               <input name="reg-name-input" type="text" id="reg-name-input" placeholder="შეიყვანეთ სახელი" />
+               <input name="reg-alstname-input" type="text" id="lastname-input" placeholder="შეიყვანეთ გვარდი" />
+               <input name="reg-password-input" onkeyup='checkRepeat();' type="password" id="reg-password-input" placeholder="შეიყვანეთ პაროლი" />
+               <span id="repeat_label" ></span>
+               <input name="reg-repassword-input" onkeyup='checkRepeat();' type="password" id="repeat_password" placeholder="გაიმეორეთ პაროლი" />
                <button class="reg-btn ">რეგისტრაცია</button>
            </form>
 
     </div>
+    <script src="/scripts/main.js"></script>
 </body>
 </html>
