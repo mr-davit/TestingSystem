@@ -1,0 +1,56 @@
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo{
+    margin-left: 30px;
+}
+.login-container{
+    margin-top: 25vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.login-container input{
+    height: 30px;
+    outline: none;
+}
+.auth-form{
+    display: flex;
+    flex-direction: column; 
+    width: 400px;
+    position: relative;
+}
+.auth-form *, .reg-form *{
+    margin-top: 15px;
+}
+
+.underline{
+    text-decoration: underline;
+}
+.auth-form p:first-child{
+    text-indent: 10px;
+}
+.auth-form p:last-child{
+     margin-top: 15px;
+}
+
+.test{
+    background-color: gray;
+    width: 2px;
+    height: 300px;
+}
+
+.reg-form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: space-between;
+}
+.reg-form p{
+    text-indent: 10px;
+}
+
