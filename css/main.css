@@ -74,6 +74,7 @@ input[type=submit i] {
   border-radius: 25px;
   width: 80%;
   height: 35px;
+  outline: none;
 }
 .log_reg .login_slider {
   top: 0;
@@ -134,7 +135,7 @@ input[type=submit i] {
 .regist_form #login_btn {
   border-radius: 25px;
   background-color: darkslateblue;
-  outline: #000000;
+  color: white;
 }
 .login input,
 .regist input {
