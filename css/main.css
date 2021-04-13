@@ -9,14 +9,11 @@
 button,
 input[type=submit i] {
   cursor: pointer;
-}
-
-[hidden] {
-  display: none !important;
+  outline: none;
 }
 
 .hidden {
-  opacity: 0;
+  display: none !important;
 }
 
 .header {
@@ -43,7 +40,7 @@ input[type=submit i] {
 
 .log_reg {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   margin: 100px auto;
@@ -74,7 +71,6 @@ input[type=submit i] {
   border-radius: 25px;
   width: 80%;
   height: 35px;
-  outline: none;
 }
 .log_reg .login_slider {
   top: 0;
@@ -150,6 +146,10 @@ input[type=submit i] {
   text-decoration: underline;
   font-size: small;
   margin-right: 58px;
+}
+
+.regist {
+  margin-left: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

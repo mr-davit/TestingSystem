@@ -9,14 +9,11 @@
 button,
 input[type="submit" i] {
   cursor: pointer;
-}
-
-[hidden] {
-  display: none !important;
+  outline: none;
 }
 
 .hidden {
-  opacity: 0;
+  display: none !important;
 }
 
 @mixin flex($justify: center, $align: center, $direct: row) {

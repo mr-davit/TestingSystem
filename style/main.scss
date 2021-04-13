@@ -18,7 +18,8 @@
 }
 
 .log_reg {
-  @include flex;
+  @include flex($justify: space-between);
+  // @include flex();
   margin: 100px auto;
   background-color: #fff;
   width: 800px;
@@ -45,7 +46,6 @@
       border-radius: 25px;
       width: 80%;
       height: 35px;
-      outline: none;
     }
   }
 
@@ -120,4 +120,8 @@
       margin-right: 58px;
     }
   }
+}
+
+.regist {
+  margin-left: auto;
 }
