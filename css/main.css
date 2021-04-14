@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+button,
+input[type=submit i] {
+  cursor: pointer;
+  outline: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.log_reg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 100px auto;
+  background-color: #fff;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+}
+.log_reg_slider {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+}
+.log_reg_slider button {
+  background-color: transparent;
+  color: white;
+  border: white solid 1px;
+  border-radius: 25px;
+  width: 80%;
+  height: 35px;
+}
+.log_reg .login_slider {
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+.log_reg .regist_slider {
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+.log_reg .blue_bg {
+  border-radius: 10px;
+  background-color: darkslateblue;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.8s ease-in-out;
+}
+.log_reg .transform {
+  transform: translate(-100%);
+}
+
+.login,
+.regist {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 60%;
+}
+.login h2,
+.regist h2 {
+  padding-bottom: 20px;
+}
+.login_social,
+.regist_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.login_form,
+.regist_form {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.login_form #regist_btn,
+.login_form #login_btn,
+.regist_form #regist_btn,
+.regist_form #login_btn {
+  border-radius: 25px;
+  background-color: darkslateblue;
+  color: white;
+}
+.login input,
+.regist input {
+  border-radius: 6px;
+  border: none;
+  background-color: #ebebeb;
+  height: 35px;
+  width: 80%;
+}
+.login input a,
+.regist input a {
+  text-decoration: underline;
+  font-size: small;
+  margin-right: 58px;
+}
+
+.regist {
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

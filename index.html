@@ -1,48 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <title>Testing Systerm</title>
-</head>
-<body>
-    <header><h1 class="logo">ლოგო</h1></header>
-    <div class="login-container">
-       
-           <form class="auth-form center" id="auth-form" type="submit">
-               <h4 class="auth-form-title underline">შესვლა</h4>
-              <input name="email-input" type="email" placeholder="შეიყვანეთ ელ.ფოსტა" />
-              <input name="password-input" type="password" placeholder="შეიყვანეთ პაროლი" />
-              <button class="auth-btn btn-style">ავტორიზაცია</button>
-              <p class="reset-password underline"><a href="#">პაროლის აღდგენა</a></p>
-           </form>
-           <div class="auth-slider center hidden">
-               <h2>Კეთილი იყოს თქვენი დაბრუნება! </h2>
-               <p>ჩვენთან კავშირის გასაგრძელებლად გთხოვთ შეხვიდეთ თქვენს პერსონალურ ინფორმაციასთან</p>
-               <button class="auth-slider-btn btn-style">ავოტრიზაცია</button>
-           </div>
-           <div class="reg-slider center ">
-               <h2>გამარჯობა მეგობარო</h2>
-               <p class="reg-slider-text">შეიყვანეთ თქვენი პირადი მონაცემები და დაიწყეთ მოგზაურობა ჩვენთან</p>
-               <button class="reg-slider-btn  btn-style"> რეგისტერაცია</button>
-           </div>
-           <form class="reg-form center hidden" type="submit">
-               <h4>რეგისტრაცია</h4>
-               <input name="reg-email-input " type="email" id="reg-email-input" placeholder="შეიყვანეთ ელ ფოსტა" />
-               <input name="reg-name-input" type="text" id="reg-name-input" placeholder="შეიყვანეთ სახელი" />
-               <input name="reg-alstname-input" type="text" id="lastname-input" placeholder="შეიყვანეთ გვარდი" />
-               <input name="reg-password-input" onkeyup="checkRepeat()" type="password" id="reg-password-input" placeholder="შეიყვანეთ პაროლი" />
-               <span id="repeat_label" ></span>
-               <input name="reg-repassword-input" onkeyup="checkRepeat()" type="password" id="repeat_password" placeholder="გაიმეორეთ პაროლი" />
-               <button class="reg-btn btn-style ">ავტორიზაცია</button>
-           </form>
-            <div class="blue-background">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Online Testing System</title>
+  </head>
+  <body>
+    <div class="log_reg">
+      <div class="login_slider log_reg_slider hidden">
+        <h2>კეთილი იყოს თქვენი დაბრუნება</h2>
+        <h4>
+          ჩვენთან კავშირის გასაგრძელებლად გთხოვთ შეხვიდეთ თქვენს პერსონალურ
+          ინფორმაციასთან
+        </h4>
+        <button class="login_slider_btn">ავტორიზაცია</button>
+      </div>
+      <div class="regist_slider log_reg_slider">
+        <h2>გამარჯობა მეგობარო!</h2>
+        <h4 class="test">
+          შეიყვანეთ თქვენი პირადი მონაცემები და დაიწყეთ მოგზაურობა ჩვენთან
+        </h4>
 
-            </div>
+        <button class="regist_slider_btn">რეგისტრაცია</button>
+      </div>
+      <div class="blue_bg log_reg_slider"></div>
+      <div class="login login_reg_center">
+        <h2>ავტორიზაცია</h2>
+
+        <div class="login_social">
+          <a href="#">&reg</a>
+          <a href="#">&reg</a>
+        </div>
+        <h6>გამოიყენეთ საკუთარი ექაუნთი</h6>
+        <form class="login_form" id="login_form" action="#">
+          <input
+            type="email"
+            name="login_email"
+            value=""
+            id="login_email"
+            placeholder="  ელ-ფოსტა"
+            required
+          />
+
+          <input
+            type="password"
+            name="login_password"
+            value=""
+            id="login_password"
+            placeholder="  პაროლი"
+            required
+          />
+          <a href="#">დაგავიწყდა პაროლი</a>
+          <input
+            id="login_btn"
+            type="submit"
+            name="login"
+            value="შესვლა"
+            id="login"
+          />
+        </form>
+      </div>
+      <div class="regist hidden login_reg_center">
+        <h2>რეგისტრაცია</h2>
+        <div class="regist_social">
+          <a href="#">&reg</a>
+          <a href="#">&reg</a>
+        </div>
+        <h6>შექმენით საკუთარი ექაუნთი</h6>
+        <form class="regist_form" id="regist_form" action="#">
+          <input
+            type="email"
+            name="regist_email"
+            value=""
+            id="regist_email"
+            placeholder="  ელ-ფოსტა"
+            required
+          />
+          <input
+            type="password"
+            name="regist_password"
+            value=""
+            id="regist_password"
+            placeholder="  პაროლი"
+          />
+          <input
+            type="password"
+            name="repeat_regist_password"
+            value=""
+            id="repeat_regist_password"
+            placeholder="  გაიმეორეთ პაროლი"
+            oninput="checkRepeat()"
+          />
+          <span></span>
+          <input
+            id="regist_btn"
+            type="submit"
+            name="regist"
+            value="შესვლა"
+            id="regist"
+          />
+        </form>
+      </div>
     </div>
-    <script src="scripts/main.js"></script>
-</body>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
