@@ -16,28 +16,6 @@ input[type=submit i] {
   display: none !important;
 }
 
-.header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  height: 100px;
-  background-color: black;
-  color: white;
-}
-.header a {
-  padding: 0px 50px;
-  color: white;
-}
-.header ul {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-
 .log_reg {
   display: flex;
   justify-content: space-between;
