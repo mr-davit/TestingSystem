@@ -7,7 +7,7 @@
 }
 
 button,
-input[type=submit i] {
+input[type="submit" i] {
   cursor: pointer;
   outline: none;
 }
