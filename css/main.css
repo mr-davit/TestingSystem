@@ -75,6 +75,7 @@ input[type=submit i] {
   border: none;
   outline: none;
   width: 60%;
+  margin-top: 10px;
 }
 .reset_password_form a {
   margin-top: 10px;
@@ -192,6 +193,11 @@ input[type=submit i] {
 
 .regist {
   margin-left: auto;
+}
+
+.warning {
+  color: red;
+  font-weight: 800;
 }
 
 /*# sourceMappingURL=main.css.map */

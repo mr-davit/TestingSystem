@@ -1,15 +1,10 @@
 function checkRepeat() {
   if (
-    document.getElementById("regist_password").value ==
-    document.getElementById("repeat_regist_password").value
+    document.getElementById("password").value !==
+    document.getElementById("repeat_password").value
   ) {
-    console.log("test");
-    document.getElementById("repeat_label").style.color = "green";
-    document.getElementById("repeat_label").innerHTML = "matching";
-  } else {
-    document.getElementById("repeat_regist_password").style.outlineColor =
-      "red";
-    document.getElementById("repeat_label").innerHTML = "not matching";
+    console.log("ar emtxeva");
+    document.querySelector(".warning").innerHTML = "პაროლები არ ემთხვევა!";
   }
 }
 
