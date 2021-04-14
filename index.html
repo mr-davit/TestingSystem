@@ -8,17 +8,6 @@
     <title>Online Testing System</title>
   </head>
   <body>
-    <div class="header">
-      <a href="#">Logo</a>
-      <ul>
-        <li>menu item</li>
-        <li>menu item</li>
-        <li>menu item</li>
-        <li>menu item</li>
-        <li>menu item</li>
-      </ul>
-    </div>
-
     <div class="log_reg">
       <div class="login_slider log_reg_slider hidden">
         <h2>კეთილი იყოს თქვენი დაბრუნება</h2>
@@ -45,13 +34,14 @@
           <a href="#">&reg</a>
         </div>
         <h6>გამოიყენეთ საკუთარი ექაუნთი</h6>
-        <form class="login_form" action="#">
+        <form class="login_form" id="login_form" action="#">
           <input
             type="email"
             name="login_email"
             value=""
             id="login_email"
             placeholder="  ელ-ფოსტა"
+            required
           />
 
           <input
@@ -60,6 +50,7 @@
             value=""
             id="login_password"
             placeholder="  პაროლი"
+            required
           />
           <a href="#">დაგავიწყდა პაროლი</a>
           <input
@@ -78,13 +69,14 @@
           <a href="#">&reg</a>
         </div>
         <h6>შექმენით საკუთარი ექაუნთი</h6>
-        <form class="regist_form" action="#">
+        <form class="regist_form" id="regist_form" action="#">
           <input
             type="email"
             name="regist_email"
             value=""
             id="regist_email"
             placeholder="  ელ-ფოსტა"
+            required
           />
           <input
             type="password"
@@ -99,6 +91,7 @@
             value=""
             id="repeat_regist_password"
             placeholder="  გაიმეორეთ პაროლი"
+            oninput="checkRepeat()"
           />
           <span></span>
           <input

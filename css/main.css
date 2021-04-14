@@ -92,9 +92,6 @@ input[type=submit i] {
   position: absolute;
   transition: transform 0.8s ease-in-out;
 }
-.log_reg .otari {
-  transform: translate(-100%);
-}
 
 .login,
 .regist {

@@ -3,10 +3,12 @@ function checkRepeat() {
     document.getElementById("regist_password").value ==
     document.getElementById("repeat_regist_password").value
   ) {
+    console.log("test");
     document.getElementById("repeat_label").style.color = "green";
     document.getElementById("repeat_label").innerHTML = "matching";
   } else {
-    document.getElementById("repeat_label").style.color = "red";
+    document.getElementById("repeat_regist_password").style.outlineColor =
+      "red";
     document.getElementById("repeat_label").innerHTML = "not matching";
   }
 }
