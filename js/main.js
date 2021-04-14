@@ -32,7 +32,7 @@ function slideRegistration() {
     authSlider.classList.toggle("hidden");
 
     let background = document.querySelector(".blue_bg");
-    background.classList.toggle("otari");
+    background.classList.toggle("transform");
   }, 1);
 }
 
