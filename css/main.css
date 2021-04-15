@@ -16,6 +16,76 @@ input[type=submit i] {
   display: none !important;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+button,
+input[type=submit i] {
+  cursor: pointer;
+  outline: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.reset_password_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100wv;
+  height: 100vh;
+}
+
+.reset_password_form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  min-width: 300px;
+}
+.reset_password_form h2 {
+  margin-bottom: 15px;
+}
+.reset_password_form .reset_password_input,
+.reset_password_form .reset_password_input_re {
+  width: 60%;
+}
+.reset_password_form .save_btn {
+  width: 60%;
+  margin-top: 10px;
+}
+.reset_password_form a {
+  margin-top: 10px;
+}
+
+.basic_input {
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  height: 35px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+}
+.basic_input::placeholder {
+  text-indent: 10px;
+}
+
+.basic_button {
+  border-radius: 25px;
+  background-color: darkslateblue;
+  color: white;
+  height: 35px;
+  border: none;
+  outline: none;
+}
+
 .log_reg {
   display: flex;
   justify-content: space-between;
@@ -69,6 +139,9 @@ input[type=submit i] {
   height: 100%;
   position: absolute;
   transition: transform 0.8s ease-in-out;
+}
+.log_reg .transform {
+  transform: translate(-100%);
 }
 
 .login,
@@ -125,6 +198,11 @@ input[type=submit i] {
 
 .regist {
   margin-left: auto;
+}
+
+.warning {
+  color: red;
+  font-weight: 800;
 }
 
 /*# sourceMappingURL=main.css.map */
