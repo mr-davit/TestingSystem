@@ -55,30 +55,35 @@ input[type=submit i] {
 }
 .reset_password_form .reset_password_input,
 .reset_password_form .reset_password_input_re {
+  width: 60%;
+}
+.reset_password_form .save_btn {
+  width: 60%;
+  margin-top: 10px;
+}
+.reset_password_form a {
+  margin-top: 10px;
+}
+
+.basic_input {
   margin-bottom: 10px;
   background-color: #ebebeb;
   height: 35px;
   outline: none;
   border: none;
   border-radius: 6px;
-  width: 60%;
 }
-.reset_password_form .reset_password_input::placeholder,
-.reset_password_form .reset_password_input_re::placeholder {
+.basic_input::placeholder {
   text-indent: 10px;
 }
-.reset_password_form .save_btn {
+
+.basic_button {
   border-radius: 25px;
   background-color: darkslateblue;
   color: white;
   height: 35px;
   border: none;
   outline: none;
-  width: 60%;
-  margin-top: 10px;
-}
-.reset_password_form a {
-  margin-top: 10px;
 }
 
 .log_reg {

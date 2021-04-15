@@ -22,24 +22,3 @@
   align-items: $align;
   flex-direction: $direct;
 }
-
-@mixin basic_input {
-  margin-bottom: 10px;
-  background-color: #ebebeb;
-  height: 35px;
-  outline: none;
-  border: none;
-  border-radius: 6px;
-  &::placeholder {
-    text-indent: 10px;
-  }
-}
-
-@mixin basic_button {
-  border-radius: 25px;
-  background-color: darkslateblue;
-  color: white;
-  height: 35px;
-  border: none;
-  outline: none;
-}
