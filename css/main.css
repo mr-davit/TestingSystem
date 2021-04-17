@@ -205,4 +205,8 @@ input[type=submit i] {
   font-weight: 800;
 }
 
+.error_syle::placeholder {
+  color: red;
+}
+
 /*# sourceMappingURL=main.css.map */

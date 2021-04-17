@@ -36,3 +36,22 @@ regSliderBtn.addEventListener("click", slideRegistration);
 
 let authSliderBtn = document.querySelector(".login_slider_btn");
 authSliderBtn.addEventListener("click", slideRegistration);
+
+const email = document.getElementById("login_email");
+const loginPassword = document.getElementById("login_password");
+const loginForm = document.getElementById("login_form");
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (email.value === "" || email.value === null) {
+    console.log("Asd");
+    email.classList.add("error_syle");
+    email.placeholder = " შეავსეთ ყველა ველი";
+    // document.querySelector(".input_error").innerHTML =
+    //   " გთხოვთ შეიყვანოთ მეილის მისამართი";
+  } else if (loginPassword.value === "" || loginPassword.value === null) {
+    loginPassword.classList.add("error_syle");
+    loginPassword.placeholder = " შეავსეთ ყველა ველი";
+  }
+});
