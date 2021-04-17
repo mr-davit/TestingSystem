@@ -5,10 +5,11 @@ function checkRepeat() {
   ) {
     console.log("ar emtxeva");
     document.querySelector(".warning").innerHTML = "პაროლები არ ემთხვევა!";
+  } else {
+    document.querySelector(".warning").innerHTML = null;
   }
 }
 
-//  let regBtn = document.querySelector('.reg-btn')
 //   regBtn.addEventListener('click', (event)=>{
 //     event.preventDefault()
 //   })
