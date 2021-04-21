@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="profile_header">
+      <h1 class="logo">ლოგო</h1>
+      <nav class="profile_header_nav">
+        <h3>პროფილი</h3>
+        <h3>სახელი გვარი</h3>
+        <h3>გამოსვლა</h3>
+      </nav>
+    </header>
+    <div class="main_section_container">
+      <div class="main_section">
+        <h4>მთავარი</h4>
+        <ul class="main_section_ul">
+          <li class="main_section_li"><a href="#">საგანი 1</a></li>
+          <li class="main_section_li"><a href="#">საგანი 2</a></li>
+          <li class="main_section_li"><a href="#">საგანი 3</a></li>
+        </ul>
+        <h4>ჩემი საგნები</h4>
+        <ul class="my_subject_ul">
+          <li class="my_subject_li"><a href="#">საგანი 1</a></li>
+          <li class="my_subject_li"><a href="#">საგანი 2</a></li>
+          <li class="my_subject_li"><a href="#">საგანი 3</a></li>
+        </ul>
+        <p><a href="#"> კითხვების ბანკი</a></p>
+      </div>
+
+      <form class="profile_section_form">
+        <h5>პროფილის რედაქტირება</h5>
+        <input
+          class="basic_input"
+          placeholder=""
+          type="email"
+          value="test@gmail.com"
+        />
+        <input class="basic_input" placeholder="" type="text" value="ნინო" />
+        <input class="basic_input" placeholder="" type="text" value="ნინიძე" />
+        <input
+          class="basic_input"
+          placeholder="შეიყვანეთ პაროლი"
+          type="password"
+        />
+        <input
+          class="basic_input"
+          placeholder="გაიმეორეთ პაროლი"
+          type="password"
+        />
+        <button class="basic_button reset_btn" id="test" type="submit">
+          განახლება
+        </button>
+      </form>
+    </div>
+
+    <script src="./js/profile.js"></script>
+  </body>
+</html>

@@ -3,16 +3,11 @@ function checkRepeat() {
     document.getElementById("password").value !==
     document.getElementById("repeat_password").value
   ) {
-    console.log("ar emtxeva");
     document.querySelector(".warning").innerHTML = "პაროლები არ ემთხვევა!";
   } else {
     document.querySelector(".warning").innerHTML = null;
   }
 }
-
-//   regBtn.addEventListener('click', (event)=>{
-//     event.preventDefault()
-//   })
 
 function slideRegistration() {
   let registration = document.querySelector(".regist");
@@ -46,7 +41,6 @@ loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (email.value === "" || email.value === null) {
-    console.log("Asd");
     email.classList.add("error_syle");
     email.placeholder = " შეავსეთ ყველა ველი";
     // document.querySelector(".input_error").innerHTML =
@@ -54,5 +48,7 @@ loginForm.addEventListener("submit", (e) => {
   } else if (loginPassword.value === "" || loginPassword.value === null) {
     loginPassword.classList.add("error_syle");
     loginPassword.placeholder = " შეავსეთ ყველა ველი";
+  } else {
+    location.href = "profile.html";
   }
 });

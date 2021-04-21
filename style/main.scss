@@ -1,30 +1,7 @@
 @import "./config";
 @import "./mixins";
 @import "./resetPassword";
-
-$white-color: white;
-$blue-color: darkslateblue;
-
-.basic_input {
-  margin-bottom: 10px;
-  background-color: #ebebeb;
-  height: 35px;
-  outline: none;
-  border: none;
-  border-radius: 6px;
-  &::placeholder {
-    text-indent: 10px;
-  }
-}
-
-.basic_button {
-  border-radius: 25px;
-  background-color: darkslateblue;
-  color: white;
-  height: 35px;
-  border: none;
-  outline: none;
-}
+@import "./profile";
 
 .log_reg {
   @include flex($justify: space-between);
