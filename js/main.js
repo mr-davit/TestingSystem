@@ -36,3 +36,22 @@ regSliderBtn.addEventListener("click", slideRegistration);
 
 let authSliderBtn = document.querySelector(".login_slider_btn");
 authSliderBtn.addEventListener("click", slideRegistration);
+
+const email = document.getElementById("login_email");
+const loginPassword = document.getElementById("login_password");
+const loginForm = document.getElementById("login_form");
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (email.value === "" || email.value === null || (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value))) {
+    
+    email.classList.add("error_syle");
+    document.querySelector(".warning_email").innerHTML = "მეილის ფორმატი არასწორია";
+    // document.querySelector(".input_error").innerHTML =
+    //   " გთხოვთ შეიყვანოთ მეილის მისამართი";
+  } else if (loginPassword.value === "" || loginPassword.value === null) {
+    loginPassword.classList.add("error_syle");
+    loginPassword.placeholder = " შეავსეთ ყველა ველი";
+  }
+});

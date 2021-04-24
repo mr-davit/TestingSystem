@@ -22,3 +22,16 @@
   align-items: $align;
   flex-direction: $direct;
 }
+
+@mixin input {
+  
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  height: 35px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  text-indent: 10px;
+  width: 80%;
+
+}
