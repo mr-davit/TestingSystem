@@ -2,19 +2,14 @@
 @import "./mixins";
 @import "./resetPassword";
 
+
 $white-color: white;
 $blue-color: darkslateblue;
 
 .basic_input {
-  margin-bottom: 10px;
-  background-color: #ebebeb;
-  height: 35px;
-  outline: none;
-  border: none;
-  border-radius: 6px;
-  &::placeholder {
-    text-indent: 10px;
-  }
+
+  @include input;
+  
 }
 
 .basic_button {
@@ -25,6 +20,9 @@ $blue-color: darkslateblue;
   border: none;
   outline: none;
 }
+
+@import "./profile";
+
 
 .log_reg {
   @include flex($justify: space-between);
@@ -100,13 +98,16 @@ $blue-color: darkslateblue;
     padding-bottom: 20px;
   }
 
+  h6 {
+    padding-bottom: 10px;
+  }
   &_social {
     @include flex;
   }
 
   &_form {
     width: 60%;
-    height: 60%;
+    height: auto;
     @include flexc($justify: space-between);
 
     #regist_btn,
@@ -115,18 +116,19 @@ $blue-color: darkslateblue;
       background-color: $blue-color;
       color: $white-color;
     }
+
+    a {
+      padding-bottom: 5px;
+    }
   }
 
   input {
-    border-radius: 6px;
-    border: none;
-    background-color: rgb(235, 235, 235);
-    height: 35px;
-    width: 80%;
+    @include input;
     a {
       text-decoration: underline;
       font-size: small;
       margin-right: 58px;
+      
     }
   }
 }

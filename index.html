@@ -34,23 +34,33 @@
           <a href="#">&reg</a>
         </div>
         <h6>გამოიყენეთ საკუთარი ექაუნთი</h6>
-        <form class="login_form" id="login_form" action="#">
+        <form
+          class="login_form"
+          id="login_form"
+          action="profile.html"
+          method="POST"
+        >
           <input
             type="email"
             name="login_email"
             value=""
             id="login_email"
-            placeholder="  ელ-ფოსტა"
-          />
 
+            placeholder="ელ-ფოსტა"
+            required
+          />
+<span class="warning_email"></span>
           <input
             type="password"
             name="login_password"
             value=""
             id="login_password"
-            placeholder="  პაროლი"
+
+            placeholder="პაროლი"
+            required
           />
           <a href="resetPassword.html">დაგავიწყდა პაროლი?</a>
+          <a></a>
           <input
             id="login_btn"
             type="submit"
@@ -73,23 +83,27 @@
             name="regist_email"
             value=""
             id="regist_email"
-            placeholder="  ელ-ფოსტა"
+            placeholder="ელ-ფოსტა"
             required
           />
+
+          <input type="text" name="name" id="name" placeholder="სახელი" required>
+          <input type="text" name="surname" id="surname" placeholder="გვარი" required>
           <input
             type="password"
             name="regist_password"
             value=""
             id="password"
-            placeholder="  პაროლი"
+            placeholder="პაროლი"
           />
           <input
             type="password"
             name="repeat_regist_password"
             value=""
             id="repeat_password"
-            placeholder="  გაიმეორეთ პაროლი"
-            onkeyup=" checkRepeat()"
+
+            placeholder="გაიმეორეთ პაროლი"
+            oninput="checkRepeat()"
           />
           <span class="warning"></span>
           <input
@@ -102,6 +116,7 @@
         </form>
       </div>
     </div>
+
     <script src="./js/main.js"></script>
   </body>
 </html>
