@@ -3,15 +3,11 @@ function checkRepeat() {
     document.getElementById("password").value !==
     document.getElementById("repeat_password").value
   ) {
-    console.log("ar emtxeva");
-    document.querySelector(".warning").innerHTML = "პაროლები არ ემთხვევა!";
+document.querySelector(".warning").innerHTML = "პაროლები არ ემთხვევა!";
+  } else {
+    document.querySelector(".warning").innerHTML = null;
   }
 }
-
-//  let regBtn = document.querySelector('.reg-btn')
-//   regBtn.addEventListener('click', (event)=>{
-//     event.preventDefault()
-//   })
 
 function slideRegistration() {
   let registration = document.querySelector(".regist");
@@ -44,14 +40,18 @@ const loginForm = document.getElementById("login_form");
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+
   if (email.value === "" || email.value === null || (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value))) {
     
     email.classList.add("error_syle");
     document.querySelector(".warning_email").innerHTML = "მეილის ფორმატი არასწორია";
+
     // document.querySelector(".input_error").innerHTML =
     //   " გთხოვთ შეიყვანოთ მეილის მისამართი";
   } else if (loginPassword.value === "" || loginPassword.value === null) {
     loginPassword.classList.add("error_syle");
     loginPassword.placeholder = " შეავსეთ ყველა ველი";
+  } else {
+    location.href = "profile.html";
   }
 });

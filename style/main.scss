@@ -2,6 +2,7 @@
 @import "./mixins";
 @import "./resetPassword";
 
+
 $white-color: white;
 $blue-color: darkslateblue;
 
@@ -19,6 +20,9 @@ $blue-color: darkslateblue;
   border: none;
   outline: none;
 }
+
+@import "./profile";
+
 
 .log_reg {
   @include flex($justify: space-between);
@@ -136,4 +140,8 @@ $blue-color: darkslateblue;
 .warning {
   color: red;
   font-weight: 800;
+}
+
+.error_syle::placeholder {
+  color: red;
 }
