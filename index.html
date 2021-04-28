@@ -45,15 +45,19 @@
             name="login_email"
             value=""
             id="login_email"
-            placeholder="  ელ-ფოსტა"
-          />
 
+            placeholder="ელ-ფოსტა"
+            required
+          />
+<span class="warning_email"></span>
           <input
             type="password"
             name="login_password"
             value=""
             id="login_password"
-            placeholder="  პაროლი"
+
+            placeholder="პაროლი"
+            required
           />
           <a href="resetPassword.html">დაგავიწყდა პაროლი?</a>
           <a></a>
@@ -79,23 +83,27 @@
             name="regist_email"
             value=""
             id="regist_email"
-            placeholder="  ელ-ფოსტა"
+            placeholder="ელ-ფოსტა"
             required
           />
+
+          <input type="text" name="name" id="name" placeholder="სახელი" required>
+          <input type="text" name="surname" id="surname" placeholder="გვარი" required>
           <input
             type="password"
             name="regist_password"
             value=""
             id="password"
-            placeholder="  პაროლი"
+            placeholder="პაროლი"
           />
           <input
             type="password"
             name="repeat_regist_password"
             value=""
             id="repeat_password"
-            placeholder="  გაიმეორეთ პაროლი"
-            onkeyup=" checkRepeat()"
+
+            placeholder="გაიმეორეთ პაროლი"
+            oninput="checkRepeat()"
           />
           <span class="warning"></span>
           <input
