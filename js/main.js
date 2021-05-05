@@ -40,9 +40,12 @@ const loginForm = document.getElementById("login_form");
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (email.value === "" || email.value === null) {
-email.classList.add("error_syle");
-    email.placeholder = " შეავსეთ ყველა ველი";
+
+  if (email.value === "" || email.value === null || (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value))) {
+    
+    email.classList.add("error_syle");
+    document.querySelector(".warning_email").innerHTML = "მეილის ფორმატი არასწორია";
+
     // document.querySelector(".input_error").innerHTML =
     //   " გთხოვთ შეიყვანოთ მეილის მისამართი";
   } else if (loginPassword.value === "" || loginPassword.value === null) {
