@@ -2,9 +2,8 @@
 @import "./mixins";
 
 .active {
-  background-color: #221d42;
+  background-color: $active-color;
 }
-
 .profile_header {
   @include flex($justify: space-between);
   padding: 0px 10px 0 25px;
@@ -21,11 +20,10 @@
   padding-left: 10px;
   padding: 20px;
   margin-top: 50px;
-
   .main_section {
     width: 15%;
-
-    margin-top: 40px;
+    height: 400px;
+    margin-top: 45px;
     // margin-right: calc(50vw - 15% - 160px);
     border: 1px solid black;
     padding: 10px;
@@ -44,9 +42,8 @@
     font-size: 1.2rem;
   }
 }
-
 .profile_form_container {
-  width: 50%;
+  width: $half-width;
 }
 .profile_section_form {
   margin: auto;
@@ -63,21 +60,16 @@
     width: 80%;
   }
 }
-
 .middle_section {
   @include flexc($justify: space-around);
-
-  width: 50%;
-
+  width: $half-width;
   &_container {
     border: 1px solid black;
-
     width: 90%;
+    height: 400px;
   }
   &_header {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+    @include flex();
     width: 90%;
     margin-bottom: 10px;
     button {
@@ -98,21 +90,13 @@
     }
   }
 }
-
-.middle_section_container * {
-  margin-bottom: 10px;
-}
 .middle_section_container {
-  .tests_content {
-    margin: 10px 0 0 10px;
-  }
   li,
   form {
     margin-left: 20px;
   }
-  .tests_content_form {
+  .tests_section_form {
     @include flexc($align: flex-start);
-
     .add_btn {
       margin-left: auto;
       width: 200px;
@@ -120,17 +104,13 @@
     }
   }
 }
-
-.students_content {
-  margin: 10px 0 0 10px;
+.students_section {
   li {
     margin-left: 20px;
   }
   form {
-    display: flex;
-    flex-direction: row;
+    @include flexv();
     margin-left: 20px;
-
     input {
       margin-right: 20px;
     }
@@ -141,13 +121,9 @@
     }
   }
 }
-
-.teachers_content {
-  margin: 10px 0 0 10px;
+.teachers_section {
   form {
-    display: flex;
-    flex-direction: row;
-
+    @include flexv();
     margin-top: 200px;
     button {
       width: 200px;
@@ -157,5 +133,13 @@
     input {
       margin-right: 20px;
     }
+  }
+}
+.content {
+  padding: 10px;
+  height: inherit;
+  @include flexc($justify: space-around, $align: start);
+  li {
+    margin-bottom: 5px;
   }
 }
