@@ -1,3 +1,8 @@
+$white-color: white;
+$blue-color: darkslateblue;
+$active-color: #221d42;
+$half-width: 50%;
+
 * {
   margin: 0;
   padding: 0;
@@ -16,9 +21,6 @@ input[type="submit" i] {
   display: none !important;
 }
 
-$white-color: white;
-$blue-color: darkslateblue;
-
 .basic_input {
   margin-bottom: 10px;
   background-color: #ebebeb;
@@ -28,7 +30,7 @@ $blue-color: darkslateblue;
   text-indent: 5px;
   border-radius: 6px;
   &::placeholder {
-    text-indent: 10px;
+    text-indent: 5px;
   }
 }
 

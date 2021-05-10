@@ -30,35 +30,138 @@
           <li class="my_subject_li"><a href="#">საგანი 2</a></li>
           <li class="my_subject_li"><a href="#">საგანი 3</a></li>
         </ul>
-        <p><a href="#"> კითხვების ბანკი</a></p>
+        <p><a class="question_bank" href="#"> კითხვების ბანკი</a></p>
       </div>
+      <div class="profile_form_container">
+        <form class="profile_section_form" id="profile_section_form">
+          <h5>პროფილის რედაქტირება</h5>
+          <input
+            class="profile_email_input basic_input"
+            name="profile_email_input"
+            placeholder=""
+            type="email"
+            value="test@gmail.com"
+            disabled
+          />
+          <input
+            class="profile_firstname_input basic_input"
+            name="profile_firstname_input"
+            placeholder=""
+            type="text"
+            value="ნინო"
+          />
+          <input
+            class="profile_lastname_input basic_input"
+            name="profile_lastname_input"
+            placeholder=""
+            type="text"
+            value="ნინიძე"
+          />
+          <input
+            class="profile_password_input basic_input"
+            name="profile_password_input"
+            placeholder="შეიყვანეთ პაროლი"
+            type="password"
+          />
+          <input
+            class="repeat_password_input basic_input"
+            name="repeat_password_input"
+            placeholder="გაიმეორეთ პაროლი"
+            type="password"
+          />
+          <button class="basic_button reset_btn" id="test" type="submit">
+            განახლება
+          </button>
+        </form>
+      </div>
+      <div class="middle_section hidden">
+        <div class="middle_section_header">
+          <button class="tests active basic_button">ტესტები</button>
+          <button class="students basic_button">მოსწავლეები</button>
+          <button class="teachers basic_button">მასწავლებლები</button>
+          <a href="#">კურსის დატოვება</a>
+        </div>
 
-      <form class="profile_section_form">
-        <h5>პროფილის რედაქტირება</h5>
-        <input
-          class="basic_input"
-          placeholder=""
-          type="email"
-          value="test@gmail.com"
-        />
-        <input class="basic_input" placeholder="" type="text" value="ნინო" />
-        <input class="basic_input" placeholder="" type="text" value="ნინიძე" />
-        <input
-          class="basic_input"
-          placeholder="შეიყვანეთ პაროლი"
-          type="password"
-        />
-        <input
-          class="basic_input"
-          placeholder="გაიმეორეთ პაროლი"
-          type="password"
-        />
-        <button class="basic_button reset_btn" id="test" type="submit">
-          განახლება
-        </button>
-      </form>
+        <div class="middle_section_container">
+          <div class="tests_section content">
+            <h4>ტესტი 1</h4>
+            <ul>
+              <li>კითხვა</li>
+              <li>პასუხი</li>
+            </ul>
+            <h4>ტესტი 2</h4>
+            <ul>
+              <li>კითხვა</li>
+              <li>პასუხი</li>
+            </ul>
+            <h4>ტესტის დამატება</h4>
+            <form class="tests_section_form">
+              <input
+                class="tests_question_input basic_input"
+                type="text"
+                placeholder="კითხვა"
+              />
+              <input
+                class="tests_answer_input basic_input"
+                type="text"
+                placeholder="პასუხი"
+              />
+              <button class="basic_button add_btn">ტესტის დამატება</button>
+            </form>
+          </div>
+          <div class="students_section hidden content">
+            <h4>კლასი 1</h4>
+            <ul>
+              <li>მოსწავლე 1</li>
+              <li>მოსწავლე 2</li>
+              <li>მოსწავლე 3</li>
+            </ul>
+            <form>
+              <input
+                class="students_name_input basic_input"
+                placeholder="სახელი"
+              />
+              <input
+                class="students_lastname_input basic_input"
+                placeholder="გვარი"
+              />
+              <button class="basic_button">მოსწავლის დამატება</button>
+            </form>
+            <h4>კლასი 2</h4>
+            <ul>
+              <li>მოსწავლე 1</li>
+              <li>მოსწავლე 2</li>
+              <li>მოსწავლე 3</li>
+            </ul>
+            <h4>კლასი 3</h4>
+            <ul>
+              <li>მოსწავლე 1</li>
+              <li>მოსწავლე 2</li>
+              <li>მოსწავლე 3</li>
+            </ul>
+          </div>
+
+          <div class="teachers_section hidden content">
+            <h4>მასწავლებელი 1</h4>
+            <h4>მასწავლებელი 2</h4>
+            <h4>მასწავლებელი 3</h4>
+            <form>
+              <input
+                class="teachers_name_input basic_input"
+                placeholder="სახელი"
+              />
+              <input
+                class="teachers_lastname_input basic_input"
+                placeholder="გვარი"
+              />
+              <button class="basic_button add_teacher">
+                მასწავლებლის დამატება
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-
     <script src="./js/profile.js"></script>
   </body>
 </html>
