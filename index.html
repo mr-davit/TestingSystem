@@ -41,15 +41,15 @@
           method="POST"
         >
           <input
-            type="email"
+            type="text"
             name="login_email"
             value=""
             id="login_email"
 
             placeholder="ელ-ფოსტა"
-            required
+            
           />
-<span class="warning_email"></span>
+
           <input
             type="password"
             name="login_password"
@@ -57,10 +57,11 @@
             id="login_password"
 
             placeholder="პაროლი"
-            required
+            
           />
           <a href="resetPassword.html">დაგავიწყდა პაროლი?</a>
           <a></a>
+          <span class="warning_email"></span>
           <input
             id="login_btn"
             type="submit"
@@ -84,11 +85,11 @@
             value=""
             id="regist_email"
             placeholder="ელ-ფოსტა"
-            required
+            
           />
 
-          <input type="text" name="name" id="name" placeholder="სახელი" required>
-          <input type="text" name="surname" id="surname" placeholder="გვარი" required>
+          <input type="text" name="name" id="name" placeholder="სახელი" >
+          <input type="text" name="surname" id="surname" placeholder="გვარი" >
           <input
             type="password"
             name="regist_password"
@@ -110,7 +111,7 @@
             id="regist_btn"
             type="submit"
             name="regist"
-            value="შესვლა"
+            value="რეგისტრაცია"
             id="regist"
           />
         </form>

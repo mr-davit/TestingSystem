@@ -37,21 +37,31 @@ const email = document.getElementById("login_email");
 const loginPassword = document.getElementById("login_password");
 const loginForm = document.getElementById("login_form");
 
+
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  
+  const rgx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const r =  rgx.test(email.value);
+  console.log(r);
+  console.log(email.value);
 
-
-  if (email.value === "" || email.value === null || (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value))) {
+  if (loginPassword.value === "" || loginPassword.value === null || email.value === "" || email.value === null ) {
+    document.querySelector(".warning_email").classList.add("error_style");
+    document.querySelector(".warning_email").innerHTML = "შეავსეთ ყველა ველი";
+  }
+  
+  else   if ( r === false  ) {
     
-    email.classList.add("error_syle");
+    document.querySelector(".warning_email").classList.add("error_style");
     document.querySelector(".warning_email").innerHTML = "მეილის ფორმატი არასწორია";
 
-    // document.querySelector(".input_error").innerHTML =
-    //   " გთხოვთ შეიყვანოთ მეილის მისამართი";
-  } else if (loginPassword.value === "" || loginPassword.value === null) {
-    loginPassword.classList.add("error_syle");
-    loginPassword.placeholder = " შეავსეთ ყველა ველი";
-  } else {
+  } 
+  
+  else {
     location.href = "profile.html";
+
   }
-});
+}
+
+);

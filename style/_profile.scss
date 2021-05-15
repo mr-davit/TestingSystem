@@ -1,14 +1,47 @@
 @import "./config";
 @import "./mixins";
 
+body {
+
+  max-width: 1200px;
+  margin: auto;
 .profile_header {
   @include flex($justify: space-between);
   padding: 0px 10px 0 25px;
   &_nav {
     @include flex($justify: space-between);
   }
-  h3 {
+
+  .menu_profile_item
+   {
+    position: relative;
+
+    &::before {
+      content: url("/svg/user.svg");
+      position: absolute;
+      top: 3px;
+      left: -25px;
+      width: 15px;
+    }
+  }
+
+  .menu_logOut_item {
+    position: relative;
+
+    &::before {
+      content: url("/svg/log-out.svg");
+      position: absolute;
+      top: 3px;
+      left: 75px;
+      width: 15px;
+    }
+
+  }
+
+  a {
+    text-decoration: none;
     margin-right: 20px;
+    color: black;
   }
 }
 .main_section_container {
@@ -42,4 +75,5 @@
   .reset_btn {
     width: 80%;
   }
+}
 }
