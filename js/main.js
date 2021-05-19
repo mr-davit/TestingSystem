@@ -1,15 +1,3 @@
-function checkRepeat() {
-  if (
-    document.getElementById("password").value !==
-    document.getElementById("repeat_password").value
-  ) {
-    document.querySelector(".warning_password").innerHTML =
-      "პაროლები არ ემთხვევა!";
-  } else {
-    document.querySelector(".warning_password").innerHTML = null;
-  }
-}
-
 function slideRegistration() {
   let registration = document.querySelector(".regist");
   registration.classList.toggle("hidden");
