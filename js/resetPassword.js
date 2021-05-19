@@ -8,6 +8,7 @@ function checkRepeat() {
     document.querySelector(".save_btn").disabled = true;
   } else {
     document.querySelector(".warning_password").innerHTML = null;
+    document.querySelector(".save_btn").disabled = false;
   }
 }
 
@@ -16,7 +17,8 @@ resetForm.addEventListener("submit", (e) => {
   console.log("test");
   e.preventDefault();
   const passwordInput = document.querySelector("#password").value;
-  if (!passwordInput) {
+  const ResPasswordInput = document.querySelector("#repeat_password").value;
+  if (!passwordInput || !ResPasswordInput) {
     document.querySelector(".warning_password").innerHTML =
       "გთხოვთ შეიყვანოთ პაროლი";
   } else {
