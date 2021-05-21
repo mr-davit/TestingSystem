@@ -37,8 +37,12 @@ const email = document.getElementById("login_email");
 const loginPassword = document.getElementById("login_password");
 const loginForm = document.getElementById("login_form");
 
+<<<<<<< Updated upstream
 
 loginForm.addEventListener("submit", (e) => {
+=======
+loginForm.addEventListener("submit", (e) => { /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+>>>>>>> Stashed changes
   e.preventDefault();
   
   const rgx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -46,12 +50,16 @@ loginForm.addEventListener("submit", (e) => {
   console.log(r);
   console.log(email.value);
 
+<<<<<<< Updated upstream
   if (loginPassword.value === "" || loginPassword.value === null || email.value === "" || email.value === null ) {
     document.querySelector(".warning_email").classList.add("error_style");
     document.querySelector(".warning_email").innerHTML = "შეავსეთ ყველა ველი";
   }
   
   else   if ( r === false  ) {
+=======
+  if (email.value === "" || email.value === null || (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value))) {
+>>>>>>> Stashed changes
     
     document.querySelector(".warning_email").classList.add("error_style");
     document.querySelector(".warning_email").innerHTML = "მეილის ფორმატი არასწორია";
