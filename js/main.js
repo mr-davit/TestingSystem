@@ -101,11 +101,9 @@ regForm.addEventListener("submit", (e) => {
   // }
   if (regName.value === "" || regName.value === null) {
     const warnName = document.querySelector(".warning_name");
-    console.log("ცარიელია");
-    warnName.innerHTML = "გთხოვთ შეიყვანოთ სახელი";
-  }
 
-  if (regName.value && /\p{Letter}/u.test(regName.value) === false) {
+    warnName.innerHTML = "გთხოვთ შეიყვანოთ სახელი";
+  } else if (regName.value > 0 && /\p{Letter}/u.test(regName.value) === false) {
     document.querySelector(".warning_name").innerHTML =
       "სახელი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
   } else {
@@ -116,6 +114,12 @@ regForm.addEventListener("submit", (e) => {
     const warnSurname = document.querySelector(".warning_surname");
     // warnSurname.classList.add("warning");
     warnSurname.innerHTML = "გთხოვთ შეიყვანოთ გვარი";
+  } else if (
+    regSurname.value.length > 0 &&
+    /\p{Letter}/u.test(regSurname.value) === false
+  ) {
+    document.querySelector(".warning_surname").innerHTML =
+      "გვარი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
   } else {
     document.querySelector(".warning_surname").innerHTML = "";
   }

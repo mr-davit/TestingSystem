@@ -80,19 +80,29 @@ resetForm.addEventListener("submit", (e) => {
   } else {
     document.querySelector(".warning_password").innerHTML = null;
   }
-
-  if (/\p{Letter}/u.test(name.value) === false) {
-    console.log(warnName);
-    warnName.innerHTML = "სახელი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
+  if (name.value.length === 0) {
+    console.log("carielia");
+    warnName.innerHTML = "გთხოვთ შეიყვანოთ სახელი";
   }
-  if (!name.value) {
+  if (name.value.length > 0 && /\p{Letter}/u.test(name.value) === false) {
     warnName.innerHTML = "სახელი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
-  } else {
+  } else if (name.value.length > 0 && /\p{Letter}/u.test(name.value) === true) {
+    console.log("ara");
     warnName.innerHTML = "";
   }
-  if (/\p{Letter}/u.test(LastName.value) === false) {
+  if (LastName.value.length === 0) {
+    console.log("carielia");
+    warnLastName.innerHTML = "გთხოვთ შეიყვანოთ გვარი";
+  }
+  if (
+    LastName.value.length > 0 &&
+    /\p{Letter}/u.test(LastName.value) === false
+  ) {
     warnLastName.innerHTML = "გვარი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
-  } else {
+  } else if (
+    LastName.value.length > 0 &&
+    /\p{Letter}/u.test(LastName.value) === true
+  ) {
     warnLastName.innerHTML = "";
   }
 });
