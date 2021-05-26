@@ -66,6 +66,8 @@ const resetForm = document.querySelector(".profile_section_form");
 resetForm.addEventListener("submit", (e) => {
   console.log("test");
   e.preventDefault();
+  const warnName = document.querySelector(".profile_name");
+  const warnLastName = document.querySelector(".profile_lastName");
   const name = document.querySelector(".profile_firstname_input");
   const LastName = document.querySelector(".profile_lastname_input");
   const passwordInput = document.querySelector("#profile_password_input").value;
@@ -80,15 +82,17 @@ resetForm.addEventListener("submit", (e) => {
   }
 
   if (/\p{Letter}/u.test(name.value) === false) {
-    document.querySelector(".warning_name").innerHTML =
-      "სახელი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
+    console.log(warnName);
+    warnName.innerHTML = "სახელი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
+  }
+  if (!name.value) {
+    warnName.innerHTML = "სახელი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
   } else {
-    document.querySelector(".warning_name").innerHTML = "";
+    warnName.innerHTML = "";
   }
   if (/\p{Letter}/u.test(LastName.value) === false) {
-    document.querySelector(".warning_name").innerHTML =
-      "გვარი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
+    warnLastName.innerHTML = "გვარი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
   } else {
-    document.querySelector(".warning_name").innerHTML = "";
+    warnLastName.innerHTML = "";
   }
 });
