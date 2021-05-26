@@ -66,6 +66,7 @@ const resetForm = document.querySelector(".profile_section_form");
 resetForm.addEventListener("submit", (e) => {
   console.log("test");
   e.preventDefault();
+  
   const name = document.querySelector(".profile_firstname_input");
   const LastName = document.querySelector(".profile_lastname_input");
   const passwordInput = document.querySelector("#profile_password_input").value;

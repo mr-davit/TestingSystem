@@ -7,7 +7,7 @@
 }
 
 button,
-input[type=submit i] {
+input[type="submit" i] {
   cursor: pointer;
   outline: none;
 }
@@ -25,6 +25,7 @@ input[type=submit i] {
   text-indent: 5px;
   border-radius: 6px;
 }
+
 .basic_input::placeholder {
   text-indent: 5px;
 }
@@ -47,7 +48,7 @@ input[type=submit i] {
 }
 
 button,
-input[type=submit i] {
+input[type="submit" i] {
   cursor: pointer;
   outline: none;
 }
@@ -65,6 +66,7 @@ input[type=submit i] {
   text-indent: 5px;
   border-radius: 6px;
 }
+
 .basic_input::placeholder {
   text-indent: 5px;
 }
@@ -95,13 +97,16 @@ input[type=submit i] {
   width: 20%;
   min-width: 300px;
 }
+
 .reset_password_form h2 {
   margin-bottom: 15px;
 }
+
 .reset_password_form .save_btn {
   width: 60%;
   margin-top: 10px;
 }
+
 .reset_password_form a {
   margin-top: 10px;
 }
@@ -135,7 +140,7 @@ input[type=submit i] {
 }
 
 button,
-input[type=submit i] {
+input[type="submit" i] {
   cursor: pointer;
   outline: none;
 }
@@ -153,6 +158,7 @@ input[type=submit i] {
   text-indent: 5px;
   border-radius: 6px;
 }
+
 .basic_input::placeholder {
   text-indent: 5px;
 }
@@ -170,6 +176,7 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+
 body .profile_header {
   display: flex;
   justify-content: space-between;
@@ -177,15 +184,18 @@ body .profile_header {
   flex-direction: row;
   padding: 0px 10px 0 25px;
 }
+
 body .profile_header ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
+
 body .profile_header .menu_profile_item {
   position: relative;
 }
+
 body .profile_header .menu_profile_item::before {
   content: url("/svg/user.svg");
   position: absolute;
@@ -193,9 +203,11 @@ body .profile_header .menu_profile_item::before {
   left: -25px;
   width: 15px;
 }
+
 body .profile_header .menu_logOut_item {
   position: relative;
 }
+
 body .profile_header .menu_logOut_item::before {
   content: url("/svg/log-out.svg");
   position: absolute;
@@ -203,29 +215,35 @@ body .profile_header .menu_logOut_item::before {
   left: 75px;
   width: 15px;
 }
+
 body .profile_header a {
   text-decoration: none;
   margin-right: 20px;
   color: black;
 }
+
 body .main_section_container {
   display: flex;
   padding-left: 10px;
   margin-top: 50px;
 }
+
 body .main_section_container .main_section {
   width: 15%;
   margin-right: calc(50vw - 15% - 160px);
 }
+
 body .main_section_container .main_section ul {
   padding-left: 10px;
   margin-top: 10px;
 }
+
 body .main_section_container .main_section_li,
 body .main_section_container .my_subject_li {
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
+
 body .profile_section_form {
   width: 300px;
   display: flex;
@@ -233,12 +251,15 @@ body .profile_section_form {
   align-items: center;
   flex-direction: column;
 }
+
 body .profile_section_form input {
   width: 80%;
 }
+
 body .profile_section_form h5 {
   margin-bottom: 10px;
 }
+
 body .profile_section_form .reset_btn {
   width: 80%;
 }
@@ -256,6 +277,7 @@ body .profile_section_form .reset_btn {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
 }
+
 .log_reg_slider {
   display: flex;
   justify-content: space-around;
@@ -269,6 +291,7 @@ body .profile_section_form .reset_btn {
   padding: 50px;
   border-radius: 10px;
 }
+
 .log_reg_slider button {
   background-color: transparent;
   color: white;
@@ -277,16 +300,19 @@ body .profile_section_form .reset_btn {
   width: 80%;
   height: 35px;
 }
+
 .log_reg .login_slider {
   top: 0;
   left: 0;
   z-index: 998;
 }
+
 .log_reg .regist_slider {
   top: 0;
   right: 0;
   z-index: 999;
 }
+
 .log_reg .blue_bg {
   border-radius: 10px;
   background-color: darkslateblue;
@@ -297,6 +323,7 @@ body .profile_section_form .reset_btn {
   position: absolute;
   transition: transform 0.8s ease-in-out;
 }
+
 .log_reg .transform {
   transform: translate(-100%);
 }
@@ -310,14 +337,17 @@ body .profile_section_form .reset_btn {
   width: 50%;
   height: 60%;
 }
+
 .login h2,
 .regist h2 {
   padding-bottom: 20px;
 }
+
 .login h6,
 .regist h6 {
   padding-bottom: 10px;
 }
+
 .login_social,
 .regist_social {
   display: flex;
@@ -325,6 +355,7 @@ body .profile_section_form .reset_btn {
   align-items: center;
   flex-direction: row;
 }
+
 .login_form,
 .regist_form {
   width: 60%;
@@ -334,6 +365,7 @@ body .profile_section_form .reset_btn {
   align-items: center;
   flex-direction: column;
 }
+
 .login_form #regist_btn,
 .login_form #login_btn,
 .regist_form #regist_btn,
@@ -342,10 +374,12 @@ body .profile_section_form .reset_btn {
   background-color: darkslateblue;
   color: white;
 }
+
 .login_form a,
 .regist_form a {
   padding-bottom: 5px;
 }
+
 .login input,
 .regist input {
   margin-bottom: 10px;
@@ -357,6 +391,7 @@ body .profile_section_form .reset_btn {
   text-indent: 10px;
   width: 80%;
 }
+
 .login input a,
 .regist input a {
   text-decoration: underline;
