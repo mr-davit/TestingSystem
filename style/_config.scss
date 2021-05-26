@@ -1,0 +1,44 @@
+$white-color: white;
+$blue-color: darkslateblue;
+$active-color: #221d42;
+$half-width: 50%;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+button,
+input[type="submit" i] {
+  cursor: pointer;
+  outline: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.basic_input {
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  height: 35px;
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  border-radius: 6px;
+  &::placeholder {
+    text-indent: 5px;
+  }
+}
+
+.basic_button {
+  border-radius: 25px;
+  background-color: darkslateblue;
+  color: white;
+  height: 35px;
+  border: none;
+  outline: none;
+}
