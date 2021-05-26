@@ -1,0 +1,148 @@
+@import "./config";
+@import "./mixins";
+@import "./resetPassword";
+
+
+$white-color: white;
+$blue-color: darkslateblue;
+
+.basic_input {
+
+  @include input;
+  
+}
+
+.basic_button {
+  border-radius: 25px;
+  background-color: darkslateblue;
+  color: white;
+  height: 35px;
+  border: none;
+  outline: none;
+}
+
+@import "./profile";
+
+
+.log_reg {
+  @include flex($justify: space-between);
+  // @include flex();
+  margin: 100px auto;
+  background-color: #fff;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba($color: #000000, $alpha: 0.25),
+    0 10px 10px rgba($color: #000000, $alpha: 0.22);
+  position: relative;
+
+  &_slider {
+    @include flexc($justify: space-around);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    color: $white-color;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+
+    button {
+      background-color: transparent;
+      color: $white-color;
+      border: $white-color solid 1px;
+      border-radius: 25px;
+      width: 80%;
+      height: 35px;
+    }
+  }
+
+  .login_slider {
+    // display: none;
+    // background-color: darkslategray;
+    top: 0;
+    left: 0;
+
+    z-index: 998;
+  }
+  .regist_slider {
+    // display: none;
+    // background-color: darkslategray;
+    top: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  .blue_bg {
+    border-radius: 10px;
+    background-color: $blue-color;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .transform {
+    transform: translate(-100%);
+  }
+}
+
+.login,
+.regist {
+  @include flexc($justify: space-around);
+  width: 50%;
+  height: 60%;
+
+  h2 {
+    padding-bottom: 20px;
+  }
+
+  h6 {
+    padding-bottom: 10px;
+  }
+  &_social {
+    @include flex;
+  }
+
+  &_form {
+    width: 60%;
+    height: auto;
+    @include flexc($justify: space-between);
+
+    #regist_btn,
+    #login_btn {
+      border-radius: 25px;
+      background-color: $blue-color;
+      color: $white-color;
+    }
+ 
+    a {
+      padding-bottom: 5px;
+    }
+  }
+
+  input {
+    @include input;
+    a {
+      text-decoration: underline;
+      font-size: small;
+      margin-right: 58px;
+      
+    }
+  }
+}
+
+.regist {
+  margin-left: auto;
+}
+
+.warning {
+  color: red;
+  font-weight: 800;
+}
+
+.error_style {
+  color: red;
+
+}

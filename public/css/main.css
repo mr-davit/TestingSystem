@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+button,
+input[type="submit" i] {
+  cursor: pointer;
+  outline: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.basic_input {
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  height: 35px;
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  border-radius: 6px;
+}
+
+.basic_input::placeholder {
+  text-indent: 5px;
+}
+
+.basic_button {
+  border-radius: 25px;
+  background-color: darkslateblue;
+  color: white;
+  height: 35px;
+  border: none;
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+button,
+input[type="submit" i] {
+  cursor: pointer;
+  outline: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.basic_input {
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  height: 35px;
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  border-radius: 6px;
+}
+
+.basic_input::placeholder {
+  text-indent: 5px;
+}
+
+.basic_button {
+  border-radius: 25px;
+  background-color: darkslateblue;
+  color: white;
+  height: 35px;
+  border: none;
+  outline: none;
+}
+
+.reset_password_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100wv;
+  height: 100vh;
+}
+
+.reset_password_form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  min-width: 300px;
+}
+
+.reset_password_form h2 {
+  margin-bottom: 15px;
+}
+
+.reset_password_form .save_btn {
+  width: 60%;
+  margin-top: 10px;
+}
+
+.reset_password_form a {
+  margin-top: 10px;
+}
+
+.basic_input {
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  height: 35px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  text-indent: 10px;
+  width: 80%;
+}
+
+.basic_button {
+  border-radius: 25px;
+  background-color: darkslateblue;
+  color: white;
+  height: 35px;
+  border: none;
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+button,
+input[type="submit" i] {
+  cursor: pointer;
+  outline: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.basic_input {
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  height: 35px;
+  outline: none;
+  border: none;
+  text-indent: 5px;
+  border-radius: 6px;
+}
+
+.basic_input::placeholder {
+  text-indent: 5px;
+}
+
+.basic_button {
+  border-radius: 25px;
+  background-color: darkslateblue;
+  color: white;
+  height: 35px;
+  border: none;
+  outline: none;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+body .profile_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0px 10px 0 25px;
+}
+
+body .profile_header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+body .profile_header .menu_profile_item {
+  position: relative;
+}
+
+body .profile_header .menu_profile_item::before {
+  content: url("/svg/user.svg");
+  position: absolute;
+  top: 3px;
+  left: -25px;
+  width: 15px;
+}
+
+body .profile_header .menu_logOut_item {
+  position: relative;
+}
+
+body .profile_header .menu_logOut_item::before {
+  content: url("/svg/log-out.svg");
+  position: absolute;
+  top: 3px;
+  left: 75px;
+  width: 15px;
+}
+
+body .profile_header a {
+  text-decoration: none;
+  margin-right: 20px;
+  color: black;
+}
+
+body .main_section_container {
+  display: flex;
+  padding-left: 10px;
+  margin-top: 50px;
+}
+
+body .main_section_container .main_section {
+  width: 15%;
+  margin-right: calc(50vw - 15% - 160px);
+}
+
+body .main_section_container .main_section ul {
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+body .main_section_container .main_section_li,
+body .main_section_container .my_subject_li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+body .profile_section_form {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body .profile_section_form input {
+  width: 80%;
+}
+
+body .profile_section_form h5 {
+  margin-bottom: 10px;
+}
+
+body .profile_section_form .reset_btn {
+  width: 80%;
+}
+
+.log_reg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 100px auto;
+  background-color: #fff;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+}
+
+.log_reg_slider {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.log_reg_slider button {
+  background-color: transparent;
+  color: white;
+  border: white solid 1px;
+  border-radius: 25px;
+  width: 80%;
+  height: 35px;
+}
+
+.log_reg .login_slider {
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+
+.log_reg .regist_slider {
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.log_reg .blue_bg {
+  border-radius: 10px;
+  background-color: darkslateblue;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.8s ease-in-out;
+}
+
+.log_reg .transform {
+  transform: translate(-100%);
+}
+
+.login,
+.regist {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 60%;
+}
+
+.login h2,
+.regist h2 {
+  padding-bottom: 20px;
+}
+
+.login h6,
+.regist h6 {
+  padding-bottom: 10px;
+}
+
+.login_social,
+.regist_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.login_form,
+.regist_form {
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login_form #regist_btn,
+.login_form #login_btn,
+.regist_form #regist_btn,
+.regist_form #login_btn {
+  border-radius: 25px;
+  background-color: darkslateblue;
+  color: white;
+}
+
+.login_form a,
+.regist_form a {
+  padding-bottom: 5px;
+}
+
+.login input,
+.regist input {
+  margin-bottom: 10px;
+  background-color: #ebebeb;
+  height: 35px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  text-indent: 10px;
+  width: 80%;
+}
+
+.login input a,
+.regist input a {
+  text-decoration: underline;
+  font-size: small;
+  margin-right: 58px;
+}
+
+.regist {
+  margin-left: auto;
+}
+
+.warning {
+  color: red;
+  font-weight: 800;
+}
+
+.error_style {
+  color: red;
+}
