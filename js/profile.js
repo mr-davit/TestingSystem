@@ -64,7 +64,6 @@ function checkRepeat() {
 // RESET VALIDATION
 const resetForm = document.querySelector(".profile_section_form");
 resetForm.addEventListener("submit", (e) => {
-  console.log("test");
   e.preventDefault();
   const warnName = document.querySelector(".profile_name");
   const warnLastName = document.querySelector(".profile_lastName");
@@ -86,11 +85,9 @@ resetForm.addEventListener("submit", (e) => {
   if (name.value.length > 0 && /\p{Letter}/u.test(name.value) === false) {
     warnName.innerHTML = "სახელი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
   } else if (name.value.length > 0 && /\p{Letter}/u.test(name.value) === true) {
-    console.log("ara");
     warnName.innerHTML = "";
   }
   if (LastName.value.length === 0) {
-    console.log("carielia");
     warnLastName.innerHTML = "გთხოვთ შეიყვანოთ გვარი";
   }
   if (
@@ -162,7 +159,7 @@ const AddStudentBtn = document.querySelector(".add_student");
 AddStudentBtn.addEventListener("click", () => {
   let validateName = false;
   let validateLastName = false;
-  console.log("validateName");
+
   if (StudentName.value.length === 0) {
     NameError.innerHTML = "გთხოვთ შეიყვანოთ სახელი";
   } else if (
@@ -176,11 +173,9 @@ AddStudentBtn.addEventListener("click", () => {
   ) {
     NameError.innerHTML = "";
     validateName = true;
-    console.log(validateName);
   }
 
   if (StudentLastName.value.length === 0) {
-    console.log("carielia");
     LastNameError.innerHTML = "გთხოვთ შეიყვანოთ გვარი";
   } else if (
     StudentLastName.value.length > 0 &&
@@ -193,13 +188,10 @@ AddStudentBtn.addEventListener("click", () => {
   ) {
     LastNameError.innerHTML = "";
     validateLastName = true;
-    console.log(validateLastName);
   }
   if (validateLastName && validateName) {
     const activeClass = document.querySelector(".active_class");
-
     const ActiveUl = activeClass.querySelector(".students_ul");
-    console.log(ActiveUl);
     const li = document.createElement("li");
     li.appendChild(
       document.createTextNode(StudentName.value + " " + StudentLastName.value)
