@@ -269,6 +269,10 @@ body .profile_section_form .reset_btn {
   width: 200px;
 }
 
+.students_section h4 {
+  cursor: pointer;
+}
+
 .log_reg {
   display: flex;
   justify-content: space-between;
