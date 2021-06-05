@@ -72,5 +72,26 @@ body {
     .reset_btn {
       width: 80%;
     }
+
+  }
+}
+.middle_section {
+  button {
+    padding: 0 15px 0 15px;
+  }
+}
+
+.students__form {
+  @include flexh($direct: column);
+
+  .add_student {
+    width: 200px;
+  }
+}
+
+.students_section {
+  h4 {
+    cursor: pointer;
+
   }
 }

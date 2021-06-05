@@ -43,7 +43,9 @@ const loginForm = document.getElementById("login_form");
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+
   const rgx =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
   const r = rgx.test(email.value);
   console.log(r);
   console.log(email.value);
@@ -68,15 +70,20 @@ loginForm.addEventListener("submit", (e) => {
 // registration validation
 
 const regForm = document.getElementById("regist_form");
+
 const regEmail = document.getElementById("regist_email");
 const regName = document.getElementById("reg_name");
+
+
 const regSurname = document.getElementById("surname");
 const regPassword = document.getElementById("password");
 
 regForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+
   const rgx =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
   const r = rgx.test(regEmail.value);
   console.log(r);
 
@@ -84,6 +91,7 @@ regForm.addEventListener("submit", (e) => {
     const warnEmail = document.querySelector(".reg_warning_email");
     warnEmail.classList.add("error_style");
     warnEmail.innerHTML = "მეილის ფორმატი არასწორია";
+
     // console.log(warnEmail);
   }  else if (regName.value === "" || regName.value === null) {
     const warnName = document.querySelector(".warning_name");
@@ -93,14 +101,18 @@ regForm.addEventListener("submit", (e) => {
     document.querySelector(".warning_name").innerHTML =
       "სახელი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
 
+
   } else if (regSurname.value === "" || regSurname.value === null) {
     const warnSurname = document.querySelector(".warning_surname");
+
     warnSurname.innerHTML = "გთხოვთ შეიყვანოთ გვარი";
+
 
   } else if (
     regSurname.value.length > 0 &&
     /\p{Letter}/u.test(regSurname.value) === false
   ) {
+
     document.querySelector(".warning_surname").innerHTML =
       "გვარი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
 
@@ -131,8 +143,3 @@ regForm.addEventListener("submit", (e) => {
 
 });
 
-
-// sessionStorage.setItem('name',regName.value);
-// sessionStorage.setItem('surname',regSurname.value);
-// sessionStorage.setItem('email',regEmail.value);
-// console.log(sessionStorage);
