@@ -212,3 +212,68 @@ let profileEmail = sessionStorage.getItem('email');
 
 document.getElementById("profileName").innerHTML = profileName + " " + profileSurname;
 document.getElementById("profileEmail").value = profileEmail;
+
+document.getElementById("profile_firstname_input").value = profileName;
+document.getElementById("profile_lastname_input").value = profileSurname;
+
+
+
+
+
+document.getElementById("profile_section_form").addEventListener("submit", (e) => {
+  e.preventDefault(); 
+
+  updname = document.getElementById("profile_firstname_input");
+  updsurname = document.getElementById("profile_lastname_input");
+  updpassword = document.getElementById("repeat_password_input");
+
+   if (updname.value === "" || updname.value === null) {
+    const warnName = document.querySelector(".warning_name");
+    warnName.innerHTML = "გთხოვთ შეიყვანოთ სახელი";
+    
+  } else if (updname.value > 0 && /\p{Letter}/u.test(updname.value) === false) {
+    document.querySelector(".warning_name").innerHTML =
+      "სახელი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
+
+
+  } else if (updsurname.value === "" || updsurname.value === null) {
+    const warnSurname = document.querySelector(".warning_surname");
+
+    warnSurname.innerHTML = "გთხოვთ შეიყვანოთ გვარი";
+
+
+  } else if (
+    updsurname.value.length > 0 &&
+    /\p{Letter}/u.test(updsurname.value) === false
+  ) {
+
+    document.querySelector(".warning_surname").innerHTML =
+      "გვარი, არ უნდა შეიცივადეს რიცხვებს და სიმბოლოებს";
+
+  } else  if (/\p{Letter}/u.test(updsurname.value) === false) {
+    document.querySelector(".warning_surname").innerHTML =
+      "გვარი, არ უნდა შეიცავდეს რიცხვებს და სიმბოლოებს";
+
+  }  else if (updpassword.value === "" || updpassword.value === null) {
+    document.querySelector(".warning_password").innerHTML =
+      "გთხოვთ შეიყვანოთ პაროლი";
+ 
+  } 
+  // else if ( !updpassword.value === "" && !updsurname.value === "" && updname.value === "" && r === true   ) {
+  //   warnEmail.innerHTML= "";
+  //   warnSurname.innerHTML = "";
+  //   warnName.innerHTML = "";
+  //   document.querySelector(".warning_password").innerHTML =
+  //     "";
+  // }
+  
+  else {
+ 
+    sessionStorage.setItem('name',updname.value);
+    sessionStorage.setItem('surname',updsurname.value);
+    sessionStorage.setItem('password',updpassword.value);
+    
+  }
+
+
+});

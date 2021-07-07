@@ -63,7 +63,13 @@ loginForm.addEventListener("submit", (e) => {
     document.querySelector(".warning_email").innerHTML =
       "მეილის ფორმატი არასწორია";
   } else {
-    location.href = "profile.html";
+
+    if ( email.value == sessionStorage.getItem('email')  && loginPassword.value == sessionStorage.getItem('password'))
+    {location.href = "profile.html";
+  } else {
+    document.querySelector(".warning_email").classList.add("error_style");
+    document.querySelector(".warning_email").innerHTML = "მომხმარებლის სახელი ან პაროლი არასწორია";
+  }
   }
 });
 
@@ -138,8 +144,10 @@ regForm.addEventListener("submit", (e) => {
     sessionStorage.setItem('name',regName.value);
     sessionStorage.setItem('surname',regSurname.value);
     sessionStorage.setItem('email',regEmail.value);
+    sessionStorage.setItem('password',regPassword.value);
     
   }
 
 });
 
+console.log(sessionStorage.getItem('password'))
